@@ -1,9 +1,10 @@
-// Load the jsnes emulator
+// Initialize canvas and emulator
 const canvas = document.getElementById('emulatorCanvas');
+const ctx = canvas.getContext('2d');
 const romInput = document.getElementById('romInput');
+
 const nes = new jsnes.NES({
   onFrame: function (frameBuffer) {
-    const ctx = canvas.getContext('2d');
     const imageData = ctx.createImageData(256, 240);
     for (let i = 0; i < frameBuffer.length; i++) {
       imageData.data[i] = frameBuffer[i];
@@ -12,6 +13,7 @@ const nes = new jsnes.NES({
   },
 });
 
+// Load ROM file on user selection
 romInput.addEventListener('change', function (event) {
   const file = event.target.files[0];
   if (file) {

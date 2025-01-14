@@ -6,12 +6,16 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
-    color: white;
+    background-color: #0d1117;
+    color: #c9d1d9;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
   }
   
   canvas {
-    border: 2px solid white;
+    border: 3px solid #c9d1d9;
     margin-top: 20px;
   }
   
